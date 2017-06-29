@@ -1,0 +1,9 @@
+D:\Visual Studio\projects\Calc\Calc\bin\Debug\netcoreapp1.1\Calc.deps.json
+D:\Visual Studio\projects\Calc\Calc\bin\Debug\netcoreapp1.1\Calc.runtimeconfig.json
+D:\Visual Studio\projects\Calc\Calc\bin\Debug\netcoreapp1.1\Calc.runtimeconfig.dev.json
+D:\Visual Studio\projects\Calc\Calc\bin\Debug\netcoreapp1.1\Calc.dll
+D:\Visual Studio\projects\Calc\Calc\bin\Debug\netcoreapp1.1\Calc.pdb
+D:\Visual Studio\projects\Calc\Calc\obj\Debug\netcoreapp1.1\Calc.csprojResolveAssemblyReference.cache
+D:\Visual Studio\projects\Calc\Calc\obj\Debug\netcoreapp1.1\Calc.AssemblyInfo.cs
+D:\Visual Studio\projects\Calc\Calc\obj\Debug\netcoreapp1.1\Calc.dll
+D:\Visual Studio\projects\Calc\Calc\obj\Debug\netcoreapp1.1\Calc.pdb
