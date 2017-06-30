@@ -4,7 +4,9 @@
 
     var result = $('.result');
     var btn = $('button');
-    var invincible = '';//!!!
+    var invisible = '';
+    var error = $('.errorMessage');
+
     var operations = {
         "<-": function () {
             let text = result.text().trim();
@@ -17,16 +19,16 @@
         ".": function () { result.append("."); },
         "=":   function () {
             let temp = result.text();
-            let replaced = replAll(temp, invincible);
+            let replaced = replAll(temp, invisible);
             let data = eval(replaced);
             if (isNaN(data)) {
                 alert("Invalid input");
-                invincible = "";
+                invisible = "";
                 result.text("");
                 return;
             }
             result.text(data);
-            invincible = "" + data;
+            invisible = "" + data;
         },
         "^":   function () { result.append('^');    },
         "+":   function () { result.append('+');    },
@@ -52,7 +54,7 @@
         'lg':  function () { result.append('lg(');  },
         "!": function () {
             this['=']();
-            let n = +invincible;
+            let n = +invisible;
             if (n < 0) {
                 alert("Invalid input");
                 return;
@@ -62,14 +64,20 @@
                 return (n >= 1) ? n * factorial(n - 1) : 1;
             };
             var temp = fact(n);
-            invincible = ""+temp;
+            invisible = ""+temp;
             result.text(temp);
         },                        };
 
     btn.on('click', function () {
+        try {
+            operations[$(this).text()]();
+            error.text("");
 
-        operations[$(this).text()]();
-    });
+        }
+        catch (ex) {
+            error.text("Invalid input.");
+        }
+        });
 
     function replAll(from,to) {
         to = from.split('lg').join('Math.LOG10E*Math.log')
